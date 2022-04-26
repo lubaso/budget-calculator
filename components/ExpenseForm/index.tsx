@@ -8,6 +8,7 @@ type Category = "taxes" | "fun";
 export type Expense = {
   category: Category;
   value: number;
+  date: string;
 };
 
 export const ExpenseForm: FC<ExpenseFormProps> = ({ onSubmit }) => {

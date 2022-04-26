@@ -1,11 +1,16 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import { Expense, ExpenseForm } from "../components/ExpenseForm";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   const handleSubmit = (expense: Expense) => {
-    console.log(`Enviou as coisas`, expense);
+    const previousExpenses: Expense[] = JSON.parse(
+      localStorage.getItem("savedExpenses") || "[]"
+    );
+    const currentExpenses = previousExpenses.concat(expense);
+    localStorage.setItem("savedExpenses", JSON.stringify(currentExpenses));
+    console.log(`Enviou as coisas`, currentExpenses);
   };
   return (
     <div>
@@ -17,6 +22,9 @@ const Home: NextPage = () => {
       <main>
         <h1>Calculadora de gastos</h1>
         <ExpenseForm onSubmit={handleSubmit} />
+        <Link href="/expenses">
+          <a>Lista de gastos</a>
+        </Link>
       </main>
     </div>
   );
