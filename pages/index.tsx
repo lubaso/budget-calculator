@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import { ExpenseForm } from "../components/ExpenseForm";
+import { Expense, ExpenseForm } from "../components/ExpenseForm";
 
 const Home: NextPage = () => {
-  const handleSubmit = () => {
-    console.log(`Enviou as coisas`);
+  const handleSubmit = (expense: Expense) => {
+    console.log(`Enviou as coisas`, expense);
   };
   return (
     <div>
