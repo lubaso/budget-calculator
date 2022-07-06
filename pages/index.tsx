@@ -20,7 +20,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1>Calculadora de gastos</h1>
+        <h1>Calculadora de gasto</h1>
         <ExpenseForm onSubmit={handleSubmit} />
         <Link href="/expenses">
           <a>Lista de gastos</a>
