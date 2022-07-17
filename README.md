@@ -28,3 +28,9 @@ Como rodar esse código:
 2. Uma janela vai se abrir, digite "npm i"
 3. digite "npm run start"
 4. Abra o navegador em localhost:3000
+
+ou
+
+1. Abra um console (ctrl+ shift+p no windows cmd+shift+p no mac) , digite "Create new terminal"
+2. Uma janela vai se abrir, digite "yarn dev"
+3. Abra o navegador em localhost:3000
